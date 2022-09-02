@@ -65,5 +65,12 @@ public class Defensa extends Plantas {
         this.dureza = dureza;
         this.peso = peso;
     }
+
+    public Defensa(String nombre, int ataque, int vida, String rango, int altura, int dureza, int peso) {
+        super(nombre, ataque, vida, rango);
+        this.altura = altura;
+        this.dureza = dureza;
+        this.peso = peso;
+    }
     
 }

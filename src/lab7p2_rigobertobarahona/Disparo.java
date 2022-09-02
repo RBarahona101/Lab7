@@ -58,6 +58,12 @@ public class Disparo extends Plantas{
         this.proyectile = proyectile;
         this.color = color;
     }
+
+    public Disparo(String nombre, int ataque, int vida, String rango, String proyectile, String color) {
+        super(nombre, ataque, vida, rango);
+        this.proyectile = proyectile;
+        this.color = color;
+    }
     
     
 }

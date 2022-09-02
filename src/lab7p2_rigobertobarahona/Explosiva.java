@@ -46,5 +46,11 @@ public class Explosiva extends Plantas{
         super(nombre, ataque, vida);
         this.magnitud = magnitud;
     }
+
+    public Explosiva(String nombre, int ataque, int vida, String rango, int magnitud) {
+        super(nombre, ataque, vida, rango);
+        this.magnitud = magnitud;
+    }
+    
     
 }

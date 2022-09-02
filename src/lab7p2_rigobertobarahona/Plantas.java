@@ -4,6 +4,7 @@ public class Plantas {
     String nombre;
     int ataque;
     int vida;
+    String rango;
 
     public String getNombre() {
         return nombre;
@@ -36,6 +37,13 @@ public class Plantas {
         this.nombre = nombre;
         this.ataque = ataque;
         this.vida = vida;
+    }
+
+    public Plantas(String nombre, int ataque, int vida, String rango) {
+        this.nombre = nombre;
+        this.ataque = ataque;
+        this.vida = vida;
+        this.rango = rango;
     }
     
 }
