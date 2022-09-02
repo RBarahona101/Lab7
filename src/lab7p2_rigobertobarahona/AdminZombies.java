@@ -9,6 +9,6 @@ package lab7p2_rigobertobarahona;
  *
  * @author Ivins
  */
-public class NewClass {
+public class AdminZombies {
     
 }
