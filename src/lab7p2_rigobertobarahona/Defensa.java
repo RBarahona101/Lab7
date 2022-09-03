@@ -72,5 +72,10 @@ public class Defensa extends Plantas {
         this.dureza = dureza;
         this.peso = peso;
     }
+
+    @Override
+    public String toString() {
+        return nombre + "," + ataque + "," + vida + "," + rango + "," + altura + "," + dureza + "," + peso;
+    }
     
 }
