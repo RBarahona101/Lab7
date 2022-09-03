@@ -33,6 +33,7 @@ public class Main extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
+        jLabel11 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -93,15 +94,24 @@ public class Main extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 102, 102));
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel11.setText("Oops se me fue el tiempo");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 921, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(174, 174, 174)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 670, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 464, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(114, 114, 114)
+                .addComponent(jLabel11)
+                .addContainerGap(292, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Main", jPanel1);
@@ -622,11 +632,14 @@ public class Main extends javax.swing.JFrame {
             Zombie_Blob.setEnabled(false);
             Zombies_Victimas.setEnabled(false);
             Zombies_Victim.setEnabled(false);
+            Zombie_Add.setEnabled(false);
             Zombie_Field1.setText("Anos de Experiencias");
             Zombies_Field2.setEnabled(false);
             Zombies_Field3.setEnabled(false);
             Zombies_Option2.setEnabled(false);
             Zombies_Option3.setEnabled(false);
+            Zombies_Color.setEnabled(true);
+            Zombies_Direccion.setEnabled(true);
         }
     }//GEN-LAST:event_Zombie_ClasicoMouseClicked
 
@@ -635,11 +648,14 @@ public class Main extends javax.swing.JFrame {
             Zombie_Blob.setEnabled(true);
             Zombies_Victimas.setEnabled(true);
             Zombies_Victim.setEnabled(true);
+            Zombie_Add.setEnabled(true);
             Zombie_Field1.setText("Tamano");
             Zombies_Field2.setEnabled(true);
             Zombies_Field3.setEnabled(true);
             Zombies_Option2.setEnabled(true);
             Zombies_Option3.setEnabled(true);
+            Zombies_Color.setEnabled(false);
+            Zombies_Direccion.setEnabled(false);
         }
     }//GEN-LAST:event_Zombie_CargadoMouseClicked
 
@@ -677,6 +693,7 @@ public class Main extends javax.swing.JFrame {
          Zombies_Option1.setText("");
          Zombies_Option2.setText("");
          Zombies_Option3.setText("");
+         Zombie_Blob.setText("");
          temporal.clear();
     }//GEN-LAST:event_Zombies_AgregarMouseClicked
 
@@ -758,6 +775,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

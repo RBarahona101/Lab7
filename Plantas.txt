@@ -1,2 +1,2 @@
-Mandricardo,90,100,Corto,56,40,12
+Mateo,80,68,Medio,80
 
