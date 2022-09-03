@@ -74,5 +74,10 @@ public class Cargado extends Zombies {
         this.enojo = enojo;
         this.victimas = victimas;
     }
+
+    @Override
+    public String toString() {
+        return nombre + "," + ataque + "," + vida + "," + tamano + "," + edad + "," + enojo + "," + victimas;
+    }
     
 }

@@ -39,6 +39,11 @@ public class Zombies {
         this.ataque = ataque;
         this.vida = vida;
     }
+
+    @Override
+    public String toString() {
+        return nombre + "," + ataque + "," + vida;
+    }
     
     
 }

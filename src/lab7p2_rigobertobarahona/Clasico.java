@@ -3,7 +3,7 @@ package lab7p2_rigobertobarahona;
 import java.util.ArrayList;
 public class Clasico extends Zombies{
     int anos;
-    ArrayList <Bandera> bandera;
+    Bandera bandera;
 
     public int getAnos() {
         return anos;
@@ -13,11 +13,11 @@ public class Clasico extends Zombies{
         this.anos = anos;
     }
 
-    public ArrayList<Bandera> getBandera() {
+    public Bandera getBandera() {
         return bandera;
     }
 
-    public void setBandera(ArrayList<Bandera> bandera) {
+    public void setBandera(Bandera bandera) {
         this.bandera = bandera;
     }
 
@@ -48,10 +48,15 @@ public class Clasico extends Zombies{
     public Clasico() {
     }
 
-    public Clasico(String nombre, int ataque, int vida, int anos, ArrayList<Bandera> bandera) {
+    public Clasico(String nombre, int ataque, int vida, int anos, Bandera bandera) {
         super(nombre, ataque, vida);
         this.anos = anos;
         this.bandera = bandera;
+    }
+
+    @Override
+    public String toString() {
+        return nombre + "," + ataque + "," + vida + "," + anos + "," + bandera;
     }
     
 }
