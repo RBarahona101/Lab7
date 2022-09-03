@@ -64,6 +64,11 @@ public class Disparo extends Plantas{
         this.proyectile = proyectile;
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return nombre + "," + ataque + "," + vida + "," + rango + "," + proyectile + "," + color;
+    }
     
     
 }

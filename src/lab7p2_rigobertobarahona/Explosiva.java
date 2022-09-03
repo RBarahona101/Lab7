@@ -51,6 +51,11 @@ public class Explosiva extends Plantas{
         super(nombre, ataque, vida, rango);
         this.magnitud = magnitud;
     }
+
+    @Override
+    public String toString() {
+        return nombre + "," + ataque + "," + vida + "," + rango + "," + magnitud;
+    }
     
     
 }

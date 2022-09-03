@@ -45,5 +45,10 @@ public class Plantas {
         this.vida = vida;
         this.rango = rango;
     }
+
+    @Override
+    public String toString() {
+        return nombre + "," + ataque + "," + vida + "," + rango;
+    }
     
 }

@@ -1,16 +1,31 @@
 package lab7p2_rigobertobarahona;
 
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 public class Main extends javax.swing.JFrame {
 
     
     public Main() {
         initComponents();
     }
-
+    AdminPlantas ap = new AdminPlantas("./Plantas.txt");
+    
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
+        buttonGroup2 = new javax.swing.ButtonGroup();
+        buttonGroup3 = new javax.swing.ButtonGroup();
+        buttonGroup4 = new javax.swing.ButtonGroup();
         Title = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
@@ -26,7 +41,7 @@ public class Main extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         Planta_Corto = new javax.swing.JRadioButton();
         Planta_Medio = new javax.swing.JRadioButton();
-        Planta_Alto = new javax.swing.JRadioButton();
+        Planta_Largo = new javax.swing.JRadioButton();
         jLabel6 = new javax.swing.JLabel();
         Planta_Explosiva = new javax.swing.JRadioButton();
         Planta_Defensa = new javax.swing.JRadioButton();
@@ -95,7 +110,7 @@ public class Main extends javax.swing.JFrame {
 
         Planta_Medio.setText("Medio");
 
-        Planta_Alto.setText("Largo");
+        Planta_Largo.setText("Largo");
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel6.setText("Tipo");
@@ -149,6 +164,11 @@ public class Main extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
         jButton1.setText("Agregar");
         jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -181,7 +201,7 @@ public class Main extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Planta_Corto, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE)
                     .addComponent(Planta_Medio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Planta_Alto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(Planta_Largo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(121, 121, 121)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -220,7 +240,7 @@ public class Main extends javax.swing.JFrame {
                                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel4)
                                     .addComponent(Planta_Vida, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Planta_Alto)))
+                                    .addComponent(Planta_Largo)))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(29, 29, 29)
                                 .addComponent(Planta_Disparo)))
@@ -319,6 +339,29 @@ public class Main extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Planta_DisparoMouseClicked
 
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        boolean posible = true;
+        String nombre = Planta_Name.getText();
+        int ataque = Integer.parseInt(Planta_Ataque.getText() );
+        int vida = Integer.parseInt(Planta_Vida.getText() );
+        String rango = "";
+        if (Planta_Corto.isSelected() ){
+            rango  = "Corto";
+        } else if (Planta_Medio.isSelected() ){
+            rango = "Medio";
+        }else if (Planta_Largo.isSelected() ){
+            rango = "Largo";
+        } else{
+            posible = false;
+            JOptionPane.showMessageDialog(this, "Hay mas de una opcion seleccionada");
+        }
+        if (Planta_Disparo.isSelected() ){
+            String proyectile = Plantas_Option1.getText();
+            String color = Plantas_Option2.getText();
+            
+        }
+    }//GEN-LAST:event_jButton1MouseClicked
+
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -353,12 +396,12 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JRadioButton Planta_Alto;
     private javax.swing.JTextField Planta_Ataque;
     private javax.swing.JRadioButton Planta_Corto;
     private javax.swing.JRadioButton Planta_Defensa;
     private javax.swing.JRadioButton Planta_Disparo;
     private javax.swing.JRadioButton Planta_Explosiva;
+    private javax.swing.JRadioButton Planta_Largo;
     private javax.swing.JRadioButton Planta_Medio;
     private javax.swing.JTextField Planta_Name;
     private javax.swing.JTextField Planta_Vida;
@@ -369,6 +412,10 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField Plantas_Option2;
     private javax.swing.JTextField Plantas_Option3;
     private javax.swing.JPanel Title;
+    private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.ButtonGroup buttonGroup2;
+    private javax.swing.ButtonGroup buttonGroup3;
+    private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
